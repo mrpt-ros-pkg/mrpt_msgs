@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/mrpt-ros-pkg/mrpt_msgs.svg?branch=master)](https://travis-ci.org/mrpt-ros-pkg/mrpt_msgs)
+* Travis CI: [![Build Status](https://travis-ci.org/mrpt-ros-pkg/mrpt_msgs.svg?branch=master)](https://travis-ci.org/mrpt-ros-pkg/mrpt_msgs)
+* ROS Build farm:
+  * Ubuntu 16.04 Xenial: [![Build Status](http://build.ros.org/job/Kdev__mrpt_msgs__ubuntu_xenial_amd64/badge/icon)](http://build.ros.org/job/Kdev__mrpt_msgs__ubuntu_xenial_amd64/)
+  * Ubuntu 18.04 Bionic: [![Build Status](http://build.ros.org/job/Mdev__mrpt_msgs__ubuntu_bionic_amd64/badge/icon)](http://build.ros.org/job/Mdev__mrpt_msgs__ubuntu_bionic_amd64/)
 
 mrpt_msgs
 ===============
