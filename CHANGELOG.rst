@@ -2,6 +2,10 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.22 (2018-05-18)
+-------------------
+* Release an an independent upstream repository, outside of "mrpt_navigation".
+
 0.1.20 (2018-04-26)
 -------------------
 * Merge branch 'master' into master
