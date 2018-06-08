@@ -2,6 +2,12 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* catkin_lint clean
+* ROS build farm badges
+* Contributors: Jose Luis Blanco-Claraco
+
 0.1.22 (2018-05-18)
 -------------------
 * Release an an independent upstream repository, outside of "mrpt_navigation".
