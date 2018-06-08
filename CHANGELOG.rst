@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.23 (2018-06-08)
+-------------------
 * catkin_lint clean
 * ROS build farm badges
 * Contributors: Jose Luis Blanco-Claraco
