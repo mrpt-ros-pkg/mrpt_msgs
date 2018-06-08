@@ -3,27 +3,27 @@ set (CMAKE_CXX_STANDARD 14)
 project(mrpt_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
-    message_generation
-    std_msgs
     geometry_msgs
+    message_generation
     sensor_msgs
+    std_msgs
     )
 
 add_message_files(
   DIRECTORY msg
   FILES
-  ObservationRangeBearing.msg
-  ObservationRangeBeacon.msg
-  SingleRangeBearingObservation.msg
-  SingleRangeBeaconObservation.msg
-  GraphSlamStats.msg
+  GraphConstraint.msg
   GraphSlamAgent.msg
   GraphSlamAgents.msg
-  NodeIDWithPose.msg
+  GraphSlamStats.msg
+  NetworkOfPoses.msg
   NodeIDWithLaserScan.msg
   NodeIDWithPose_vec.msg
-  GraphConstraint.msg
-  NetworkOfPoses.msg
+  NodeIDWithPose.msg
+  ObservationRangeBeacon.msg
+  ObservationRangeBearing.msg
+  SingleRangeBeaconObservation.msg
+  SingleRangeBearingObservation.msg
   )
 
 
@@ -34,12 +34,14 @@ add_service_files(
    )
 
 generate_messages(DEPENDENCIES
-    std_msgs
     geometry_msgs
-    sensor_msgs)
+    sensor_msgs
+    std_msgs
+	)
 
 catkin_package(CATKIN_DEPENDS
-    message_runtime
-    std_msgs
     geometry_msgs
-    sensor_msgs)
+    message_runtime
+    sensor_msgs
+    std_msgs
+	)
