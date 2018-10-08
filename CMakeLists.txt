@@ -20,6 +20,8 @@ add_message_files(
   NodeIDWithLaserScan.msg
   NodeIDWithPose_vec.msg
   NodeIDWithPose.msg
+  ObservationObject.msg
+  SingleObjectObservation.msg
   ObservationRangeBeacon.msg
   ObservationRangeBearing.msg
   SingleRangeBeaconObservation.msg
