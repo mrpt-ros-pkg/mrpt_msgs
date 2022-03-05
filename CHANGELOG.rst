@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2022-03-05)
+------------------
 * Add generic observation msg
 * Merge pull request `#1 <https://github.com/mrpt-ros-pkg/mrpt_msgs/issues/1>`_ from tuw-robotics/master
   Add range-bearing object observations
