@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2022-03-05)
+------------------
 * fix ros2 deps
 * Contributors: Jose Luis Blanco Claraco
 
