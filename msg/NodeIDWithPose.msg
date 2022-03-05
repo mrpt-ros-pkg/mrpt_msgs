@@ -9,8 +9,8 @@
 #
 # Currently used in the mrpt_graphslam_2d ROS application.
 
-uint64 nodeID
+uint64 node_id
 geometry_msgs/Pose pose
 
-std_msgs/String str_ID
-uint64 nodeID_loc
+std_msgs/String str_id
+uint64 node_id_loc

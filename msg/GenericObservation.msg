@@ -2,7 +2,7 @@
 # serialized into a binary stream via mrpt::serialization methods.
 
 # Time of sensor data acquisition, coordinate frame ID.
-Header header
+std_msgs/Header header
 
 # Generalized serialized observation data
 uint8[] data

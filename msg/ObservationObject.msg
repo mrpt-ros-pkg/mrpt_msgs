@@ -3,7 +3,7 @@
 #  from some sensor on the robot.
 
 # Time of sensor data acquisition, coordinate frame ID.
-Header header
+std_msgs/Header header
 
 # The sensor pose on the robot coordinates frame.
 geometry_msgs/Pose sensor_pose_on_robot

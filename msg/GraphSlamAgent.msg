@@ -16,7 +16,7 @@ uint16 port
 std_msgs/Bool is_online
 
 # Timestamp that the SLAM Agent was last seen
-std_msgs/Time last_seen_time
+builtin_interfaces/Time last_seen_time
 
 # ROS Topics namespace that the agent is running under
 # By definition this is going to be the same as the *name*
@@ -26,4 +26,4 @@ std_msgs/String topic_namespace
 # this is the last field of the IPv4 address of the corresponding agent
 # e.g. IP=192.168.100.17
 # agent_ID = 17
-int32 agent_ID 
+int32 agent_id 
