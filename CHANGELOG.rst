@@ -2,6 +2,14 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add generic observation msg
+* Merge pull request `#1 <https://github.com/mrpt-ros-pkg/mrpt_msgs/issues/1>`_ from tuw-robotics/master
+  Add range-bearing object observations
+* Update URLs to https
+* Contributors: Felix König, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco
+
 0.1.23 (2018-06-08)
 -------------------
 * catkin_lint clean
