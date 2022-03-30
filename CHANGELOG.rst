@@ -2,6 +2,11 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix missing ament_export_dependencies()
+* Contributors: Jose Luis Blanco-Claraco
+
 0.3.1 (2022-03-05)
 ------------------
 * fix ros2 deps
