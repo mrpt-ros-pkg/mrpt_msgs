@@ -29,6 +29,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/SingleRangeBearingObservation.msg
   # Services:
   srv/GetCMGraph.srv
+  DEPENDENCIES
+    std_msgs
+    geometry_msgs
+  ADD_LINTER_TESTS
   )
 
 ament_export_dependencies(
