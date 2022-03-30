@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.2 (2022-03-30)
+------------------
 * Fix missing ament_export_dependencies()
 * Contributors: Jose Luis Blanco-Claraco
 
