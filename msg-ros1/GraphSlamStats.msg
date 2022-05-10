@@ -9,8 +9,8 @@ int32 nodes_total
 
 # edge-related stats
 int32 edges_total
-int32 edges_ICP2D
-int32 edges_ICP3D
+int32 edges_icp_2d
+int32 edges_icp_3d
 int32 edges_odom
 int32 loop_closures
 

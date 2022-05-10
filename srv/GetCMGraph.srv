@@ -2,6 +2,6 @@
 # Service is currently used in mrpt_graphslam_2d application
 # Returned graph should, at all cost contain the specified nodes
 
-uint64[] nodeIDs
+uint64[] node_ids
 ---
 mrpt_msgs/NetworkOfPoses cm_graph

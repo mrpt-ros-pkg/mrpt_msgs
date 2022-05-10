@@ -26,4 +26,4 @@ std_msgs/String topic_namespace
 # this is the last field of the IPv4 address of the corresponding agent
 # e.g. IP=192.168.100.17
 # agent_ID = 17
-int32 agent_ID 
+int32 agent_id 

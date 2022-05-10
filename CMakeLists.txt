@@ -1,50 +1,116 @@
-cmake_minimum_required(VERSION 3.1)
-set (CMAKE_CXX_STANDARD 14)
+if ("$ENV{ROS_VERSION}" STREQUAL "2")
+	cmake_minimum_required(VERSION 3.8)
+	set(DETECTED_ROS2 TRUE)
+else()
+	cmake_minimum_required(VERSION 3.1)
+	set(DETECTED_ROS1 TRUE)
+    set (CMAKE_CXX_STANDARD 14)
+endif()
 project(mrpt_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-    geometry_msgs
-    message_generation
-    sensor_msgs
-    std_msgs
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+if (DETECTED_ROS1)
+    find_package(catkin REQUIRED COMPONENTS
+        geometry_msgs
+        message_generation
+        sensor_msgs
+        std_msgs
+        )
+
+    # list must be hand-ordered to satisfy dependencies between .msg files:
+    add_message_files(
+        DIRECTORY
+            msg-ros1
+        FILES
+        GraphSlamAgent.msg
+        GenericObservation.msg
+        GraphConstraint.msg
+        GraphSlamStats.msg
+        ObservationObject.msg
+        ObservationRangeBeacon.msg
+        ObservationRangeBearing.msg
+    )
+    add_message_files(
+        DIRECTORY
+            msg-common
+        FILES
+        GraphSlamAgents.msg
+        NetworkOfPoses.msg
+        NodeIDWithLaserScan.msg
+        NodeIDWithPose.msg
+        NodeIDWithPoseVec.msg
+        SingleObjectObservation.msg
+        SingleRangeBeaconObservation.msg
+        SingleRangeBearingObservation.msg
     )
 
-add_message_files(
-  DIRECTORY msg
-  FILES
-  GenericObservation.msg
-  GraphConstraint.msg
-  GraphSlamAgent.msg
-  GraphSlamAgents.msg
-  GraphSlamStats.msg
-  NetworkOfPoses.msg
-  NodeIDWithLaserScan.msg
-  NodeIDWithPose_vec.msg
-  NodeIDWithPose.msg
-  ObservationObject.msg
-  SingleObjectObservation.msg
-  ObservationRangeBeacon.msg
-  ObservationRangeBearing.msg
-  SingleRangeBeaconObservation.msg
-  SingleRangeBearingObservation.msg
-  )
+    add_service_files(
+        DIRECTORY srv
+        FILES
+        GetCMGraph.srv
+        )
+
+    generate_messages(DEPENDENCIES
+        geometry_msgs
+        sensor_msgs
+        std_msgs
+        )
+
+    catkin_package(CATKIN_DEPENDS
+        geometry_msgs
+        message_runtime
+        sensor_msgs
+        std_msgs
+        )
+endif()
+
+if (DETECTED_ROS2)
+    # find dependencies
+    find_package(ament_cmake REQUIRED)
+    find_package(rosidl_default_generators REQUIRED)
+    find_package(std_msgs REQUIRED)
+    find_package(geometry_msgs REQUIRED)
+    find_package(sensor_msgs REQUIRED)
 
 
-add_service_files(
-   DIRECTORY srv
-   FILES
-   GetCMGraph.srv
-   )
+    list(APPEND LST_MSG_FILES
+        msg-ros2/GenericObservation.msg
+        msg-ros2/GraphConstraint.msg
+        msg-ros2/GraphSlamAgent.msg
+        msg-ros2/GraphSlamStats.msg
+        msg-ros2/ObservationObject.msg
+        msg-ros2/ObservationRangeBeacon.msg
+        msg-ros2/ObservationRangeBearing.msg
+    )
 
-generate_messages(DEPENDENCIES
-    geometry_msgs
-    sensor_msgs
-    std_msgs
-	)
+    rosidl_generate_interfaces(${PROJECT_NAME}
+    # Messages:
+    ${LST_MSG_FILES}
+    # Services:
+    srv/GetCMGraph.srv
+    DEPENDENCIES
+        std_msgs
+        geometry_msgs
+        sensor_msgs
+    ADD_LINTER_TESTS
+    )
 
-catkin_package(CATKIN_DEPENDS
-    geometry_msgs
-    message_runtime
-    sensor_msgs
-    std_msgs
-	)
+    ament_export_dependencies(rosidl_default_runtime)
+
+    if(BUILD_TESTING)
+      find_package(ament_lint_auto REQUIRED)
+      # the following line skips the linter which checks for copyrights
+      # uncomment the line when a copyright and license is not present in all source files
+      #set(ament_cmake_copyright_FOUND TRUE)
+      # the following line skips cpplint (only works in a git repo)
+      # uncomment the line when this package is not in a git repo
+      #set(ament_cmake_cpplint_FOUND TRUE)
+      ament_lint_auto_find_test_dependencies()
+    endif()
+    
+    ament_package()
+    
+endif()
