@@ -1,6 +1,5 @@
-# This message holds an observation of one or more landmarks 
-#  detected by their range (distance) 
-#  from some sensor on the robot.
+# An observation of one or more landmarks detected by their range from
+# a sensor on the robot.
 
 # Time of sensor data acquisition, coordinate frame ID.
 std_msgs/Header header

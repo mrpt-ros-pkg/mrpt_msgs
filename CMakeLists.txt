@@ -1,4 +1,4 @@
-if ("$ENV{ROS_VERSION}" STREQUAL "2")
+if("$ENV{ROS_VERSION}" STREQUAL "2")
 	cmake_minimum_required(VERSION 3.8)
 	set(DETECTED_ROS2 TRUE)
 else()
@@ -12,7 +12,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-if (DETECTED_ROS1)
+if(DETECTED_ROS1)
     find_package(catkin REQUIRED COMPONENTS
         geometry_msgs
         message_generation
@@ -67,7 +67,7 @@ if (DETECTED_ROS1)
         )
 endif()
 
-if (DETECTED_ROS2)
+if(DETECTED_ROS2)
     # find dependencies
     find_package(ament_cmake REQUIRED)
     find_package(rosidl_default_generators REQUIRED)
