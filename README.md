@@ -11,7 +11,5 @@ ROS messages for [MRPT](https://www.mrpt.org/) classes and objects
 
 * ROS wiki: https://wiki.ros.org/mrpt_msgs
 * Usage examples and tutorials: https://wiki.ros.org/mrpt_navigation/Tutorials
-* Branches:
-  * `ros1`: Main branch for ros1.
-  * `ros2`: Main branch for ros2.
+* Branches: `master` common branch for ROS1 & ROS2.
  
