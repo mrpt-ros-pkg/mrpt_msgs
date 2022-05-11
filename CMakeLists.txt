@@ -75,22 +75,26 @@ if (DETECTED_ROS2)
     find_package(geometry_msgs REQUIRED)
     find_package(sensor_msgs REQUIRED)
 
-
-    list(APPEND LST_MSG_FILES
-        msg-ros2/GenericObservation.msg
-        msg-ros2/GraphConstraint.msg
-        msg-ros2/GraphSlamAgent.msg
-        msg-ros2/GraphSlamStats.msg
-        msg-ros2/ObservationObject.msg
-        msg-ros2/ObservationRangeBeacon.msg
-        msg-ros2/ObservationRangeBearing.msg
-    )
-
     rosidl_generate_interfaces(${PROJECT_NAME}
     # Messages:
-    ${LST_MSG_FILES}
+    msg-ros2/GenericObservation.msg
+    msg-ros2/GraphConstraint.msg
+    msg-ros2/GraphSlamAgent.msg
+    msg-ros2/GraphSlamStats.msg
+    msg-ros2/ObservationObject.msg
+    msg-ros2/ObservationRangeBeacon.msg
+    msg-ros2/ObservationRangeBearing.msg
+    msg-common/GraphSlamAgents.msg
+    msg-common/NetworkOfPoses.msg
+    msg-common/NodeIDWithLaserScan.msg
+    msg-common/NodeIDWithPose.msg
+    msg-common/NodeIDWithPoseVec.msg
+    msg-common/SingleObjectObservation.msg
+    msg-common/SingleRangeBeaconObservation.msg
+    msg-common/SingleRangeBearingObservation.msg
     # Services:
     srv/GetCMGraph.srv
+    # deps:
     DEPENDENCIES
         std_msgs
         geometry_msgs
