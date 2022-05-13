@@ -2,6 +2,13 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Linter fixes
+* Unify ROS1 / ROS2 builds in one branch
+* Add License file
+* Contributors: Jose Luis Blanco Claraco
+
 0.2.0 (2022-03-05)
 ------------------
 * Add generic observation msg
