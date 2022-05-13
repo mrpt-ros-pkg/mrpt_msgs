@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.0 (2022-05-13)
+------------------
 * Linter fixes
 * Unify ROS1 / ROS2 builds in one branch
 * Add License file
