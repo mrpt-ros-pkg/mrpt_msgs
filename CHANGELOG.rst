@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.1 (2022-05-17)
+------------------
 * add missing test dependencies
 * Contributors: Jose Luis Blanco Claraco
 
