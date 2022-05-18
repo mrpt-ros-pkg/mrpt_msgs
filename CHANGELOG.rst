@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.2 (2022-05-18)
+------------------
 * Fix build-farm test dependencies
 * Contributors: Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco
 
