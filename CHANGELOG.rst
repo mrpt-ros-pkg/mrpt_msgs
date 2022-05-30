@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.3 (2022-05-30)
+------------------
 * Fix lint errors
 * Add contributing.md file
 * Rename license file as "LICENSE"
