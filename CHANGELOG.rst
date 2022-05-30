@@ -2,6 +2,13 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix lint errors
+* Add contributing.md file
+* Rename license file as "LICENSE"
+* Contributors: Jose Luis Blanco-Claraco
+
 0.4.2 (2022-05-18)
 ------------------
 * Fix build-farm test dependencies
