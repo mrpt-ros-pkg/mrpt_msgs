@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.4 (2022-06-12)
+------------------
 * Correct build_type in package.xml (solves installing unexpected files, as reported [here](https://github.com/ros/rosdistro/pull/33532))
 * Contributors: Jose Luis Blanco-Claraco
 
