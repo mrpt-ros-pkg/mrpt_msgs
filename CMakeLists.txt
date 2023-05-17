@@ -45,6 +45,8 @@ if(DETECTED_ROS1)
         SingleObjectObservation.msg
         SingleRangeBeaconObservation.msg
         SingleRangeBearingObservation.msg
+        Waypoint.msg
+        WaypointSequence.msg
     )
 
     add_service_files(
@@ -92,7 +94,9 @@ if(DETECTED_ROS2)
     msg-common/SingleObjectObservation.msg
     msg-common/SingleRangeBeaconObservation.msg
     msg-common/SingleRangeBearingObservation.msg
-    # Services:
+    msg-common/Waypoint.msg
+    msg-common/WaypointSequence.msg
+# Services:
     srv/GetCMGraph.srv
     # deps:
     DEPENDENCIES
