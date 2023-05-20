@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.5 (2023-05-20)
+------------------
 * Add Waypoint messages
 * Contributors: Jose Luis Blanco-Claraco
 
