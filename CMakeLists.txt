@@ -32,6 +32,7 @@ if(DETECTED_ROS1)
         ObservationObject.msg
         ObservationRangeBeacon.msg
         ObservationRangeBearing.msg
+        WaypointSequence.msg
     )
     add_message_files(
         DIRECTORY
@@ -46,7 +47,6 @@ if(DETECTED_ROS1)
         SingleRangeBeaconObservation.msg
         SingleRangeBearingObservation.msg
         Waypoint.msg
-        WaypointSequence.msg
     )
 
     add_service_files(
@@ -86,6 +86,7 @@ if(DETECTED_ROS2)
     msg-ros2/ObservationObject.msg
     msg-ros2/ObservationRangeBeacon.msg
     msg-ros2/ObservationRangeBearing.msg
+    msg-ros2/WaypointSequence.msg
     msg-common/GraphSlamAgents.msg
     msg-common/NetworkOfPoses.msg
     msg-common/NodeIDWithLaserScan.msg
@@ -95,7 +96,6 @@ if(DETECTED_ROS2)
     msg-common/SingleRangeBeaconObservation.msg
     msg-common/SingleRangeBearingObservation.msg
     msg-common/Waypoint.msg
-    msg-common/WaypointSequence.msg
 # Services:
     srv/GetCMGraph.srv
     # deps:
