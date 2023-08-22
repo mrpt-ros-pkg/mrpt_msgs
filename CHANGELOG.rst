@@ -2,6 +2,11 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add new GenericObject msg type
+* Contributors: Jose Luis Blanco-Claraco
+
 0.4.6 (2023-05-27)
 ------------------
 * fix endline space (fixes uncrustify test error)
