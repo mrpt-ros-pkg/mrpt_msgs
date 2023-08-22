@@ -38,6 +38,7 @@ if(DETECTED_ROS1)
         DIRECTORY
             msg-common
         FILES
+        GenericObject.msg
         GraphSlamAgents.msg
         NetworkOfPoses.msg
         NodeIDWithLaserScan.msg
@@ -87,6 +88,7 @@ if(DETECTED_ROS2)
     msg-ros2/ObservationRangeBeacon.msg
     msg-ros2/ObservationRangeBearing.msg
     msg-ros2/WaypointSequence.msg
+    msg-common/GenericObject.msg
     msg-common/GraphSlamAgents.msg
     msg-common/NetworkOfPoses.msg
     msg-common/NodeIDWithLaserScan.msg
@@ -112,6 +114,6 @@ if(DETECTED_ROS2)
       find_package(ament_cmake_xmllint REQUIRED)
       ament_xmllint()
     endif()
-    
+
     ament_package()
 endif()
