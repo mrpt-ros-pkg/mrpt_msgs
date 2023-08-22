@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.7 (2023-08-22)
+------------------
 * Add new GenericObject msg type
 * Contributors: Jose Luis Blanco-Claraco
 
