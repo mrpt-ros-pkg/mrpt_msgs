@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.0 (2024-10-09)
+------------------
 * Export the mrpt-nav speed_ratio property of waypoints to ROS mrpt_msgs/Waypoint.msg
 * fix whitespace (uncrustify test fix)
 * Contributors: Jose Luis Blanco-Claraco
