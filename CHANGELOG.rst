@@ -2,8 +2,8 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.0 (2025-10-17)
+------------------
 * Export mrpt_msgs::mrpt_msgs_library cmake target as ROS2 std packages
 * Update README.md: Mark Noetic as EOL
 * Readme: Update ROS badges
