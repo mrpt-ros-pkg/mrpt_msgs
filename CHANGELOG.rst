@@ -2,6 +2,13 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Export mrpt_msgs::mrpt_msgs_library cmake target as ROS2 std packages
+* Update README.md: Mark Noetic as EOL
+* Readme: Update ROS badges
+* Contributors: Jose Luis Blanco-Claraco
+
 0.5.0 (2024-10-09)
 ------------------
 * Export the mrpt-nav speed_ratio property of waypoints to ROS mrpt_msgs/Waypoint.msg
