@@ -98,7 +98,7 @@ if(DETECTED_ROS2)
     msg-common/SingleRangeBeaconObservation.msg
     msg-common/SingleRangeBearingObservation.msg
     msg-common/Waypoint.msg
-# Services:
+    # Services:
     srv/GetCMGraph.srv
     # deps:
     DEPENDENCIES
@@ -108,12 +108,35 @@ if(DETECTED_ROS2)
     ADD_LINTER_TESTS
     )
 
-    ament_export_dependencies(rosidl_default_runtime)
+    rosidl_get_typesupport_target(cpp_typesupport_target "${PROJECT_NAME}" "rosidl_typesupport_cpp")
+
+    if(TARGET "${cpp_typesupport_target}")
+      add_library(${PROJECT_NAME}_library INTERFACE)
+      target_include_directories(${PROJECT_NAME}_library INTERFACE
+      #"$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+      "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
+      target_link_libraries(${PROJECT_NAME}_library INTERFACE
+      "${cpp_typesupport_target}")
+
+      #install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
+      install(
+        TARGETS ${PROJECT_NAME}_library EXPORT export_${PROJECT_NAME}
+      )
+
+      # Export old-style CMake variables
+      ament_export_include_directories("include/${PROJECT_NAME}")
+
+      # Export modern CMake targets
+      ament_export_targets(export_${PROJECT_NAME})
+
+    endif()
 
     if(BUILD_TESTING)
       find_package(ament_cmake_xmllint REQUIRED)
       ament_xmllint()
     endif()
+
+    ament_export_dependencies(rosidl_default_runtime)
 
     ament_package()
 endif()
